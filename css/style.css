@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* shared styles */
 *{
     font-family: "Work Sans", sans-serif;
 
+}
+.section-title {
+    color: var(--Dark-01, #131313);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.gray-color {
+    color: var(--Dark-03, #727272);
+ 
+}
+.description{
+    
+    font-size: 1rem;
+    font-weight: 400;
 }
 .btn-primary{
     border-radius: 8px;
@@ -46,11 +61,7 @@ nav li a{
 
 
 }
-.nav-title {
-    color: var(--Dark-01, #131313);
-    font-size: 45px;
-    font-weight: 700;
-}
+
 .banner-content {
 
     /* width: 800px; */
@@ -62,30 +73,105 @@ nav li a{
     font-size: 64px;
     font-weight: 700;
 }
-.banner-description {
-    color: var(--Dark-03, #727272);
- 
-}
+
 .ban{
     margin: 30px 240px;
 }
 .banner img{
     width: 100%;
 }
+
+/* main section style */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/* team content  */
+.team-container {
+    display: flex;
+    align-items: center;
+
+}
+.team-image {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 1.5rem;
+}
+.team-content-title{
+    font-size: 45px;
+}
+.team-content{
+    padding: 0 70px;
+}
+
+.quick {
+    color: #727272;
+    font-weight: 500;
+
+}
+.Our {
+    color: #131313;
+    font-weight: 700;
+
+}
+.Features{
+    color: #FF900E;
+    font-weight: 700;
+}
+/* Some Facts styles */
+.fact-card {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.fact-card .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    padding: 30px;
+
+}
+.card-description{
+    font-size: 20px;
+    font-weight: 600;
+    color: #727272;
+    margin-top: 5px;
+
+}
+.card-stat{
+color: #424242;
+text-align: center;
+font-size: 45px;
+font-weight: 600;
+margin: 10px 0;
+
+}
+.fact-card img{
+    padding-top: 40px;
+}
+
+
 /* responsive style */
 @media screen and (max-width:576px) {
     header{
         padding: 20px;
     }
-    nav{
+    nav , .team-container{ 
         flex-direction: column;
     }
     .banner-content{
         width: 100%;
     }
+    .team-image {
+       
+        grid-template-columns: 1fr;
+     
+    }
+    .team-content{
+        padding: 0 20px;
+    }
 }
 @media screen and (min-width:576px) and (max-width:962px){
-    nav{
+    nav , .team-container {
         flex-direction: column;
     }
     header{
